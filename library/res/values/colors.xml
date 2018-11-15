@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="psts_background_tab_pressed">#1AFFFFFF</color>
+    <color name="psts_background_tab_pressed_ripple">#AAFFFFFF</color>
+    <color name="color_gray">#666666</color>
+    <color name="col_f3f3f3">#f3f3f3</color>
+
+    <color name="col_ff719e">#ff719e</color>
+    <color name="col_ffae9b">#ffae9b</color>
+    <color name="col_55a8ff">#55a8ff</color>
+    <color name="col_8998ff">#8998ff</color>
+
+
+</resources>
