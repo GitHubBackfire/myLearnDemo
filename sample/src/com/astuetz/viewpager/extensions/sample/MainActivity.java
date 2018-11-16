@@ -36,8 +36,10 @@ import android.view.View;
 import android.widget.Toast;
 
 import com.astuetz.PagerSlidingTabStrip;
+import com.astuetz.viewpager.extensions.sample.fragment.CanvasActionFragment;
 import com.astuetz.viewpager.extensions.sample.fragment.CustomViewFragment;
 import com.astuetz.viewpager.extensions.sample.fragment.SuperAwesomeCardFragment;
+import com.astuetz.viewpager.extensions.sample.fragment.WaveViewFragment;
 import com.readystatesoftware.systembartint.SystemBarTintManager;
 
 import java.util.ArrayList;
@@ -73,7 +75,10 @@ public class MainActivity extends ActionBarActivity {
         ArrayList<Fragment> fragments = new ArrayList<>();
         fragments.add(SuperAwesomeCardFragment.newInstance(1));
         fragments.add(new CustomViewFragment());
-        adapter = new MyPagerAdapter(getSupportFragmentManager(),fragments);
+        fragments.add(new WaveViewFragment());
+        fragments.add(new CanvasActionFragment());
+
+        adapter = new MyPagerAdapter(getSupportFragmentManager(), fragments);
 
         pager.setAdapter(adapter);
         tabs.setViewPager(pager);
@@ -146,15 +151,14 @@ public class MainActivity extends ActionBarActivity {
 
     public class MyPagerAdapter extends FragmentPagerAdapter {
 
-        private final String[] TITLES = {"FIRST", "CustomUI"};
+        private final String[] TITLES = {"首页", "CustomUI", "WaveView", "画布操作"};
         private ArrayList<Fragment> fragments = new ArrayList<>();
 
         MyPagerAdapter(FragmentManager fm) {
             super(fm);
         }
 
-        MyPagerAdapter(FragmentManager fm, ArrayList<Fragment> fragments)
-        {
+        MyPagerAdapter(FragmentManager fm, ArrayList<Fragment> fragments) {
             super(fm);
             this.fragments.addAll(fragments);
         }
