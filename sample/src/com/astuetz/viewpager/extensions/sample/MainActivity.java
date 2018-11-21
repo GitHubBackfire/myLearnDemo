@@ -38,6 +38,7 @@ import android.widget.Toast;
 import com.astuetz.PagerSlidingTabStrip;
 import com.astuetz.viewpager.extensions.sample.fragment.CanvasActionFragment;
 import com.astuetz.viewpager.extensions.sample.fragment.CustomViewFragment;
+import com.astuetz.viewpager.extensions.sample.fragment.PropertyAnimatorFragment;
 import com.astuetz.viewpager.extensions.sample.fragment.SuperAwesomeCardFragment;
 import com.astuetz.viewpager.extensions.sample.fragment.WaveViewFragment;
 import com.readystatesoftware.systembartint.SystemBarTintManager;
@@ -77,6 +78,7 @@ public class MainActivity extends ActionBarActivity {
         fragments.add(new CustomViewFragment());
         fragments.add(new WaveViewFragment());
         fragments.add(new CanvasActionFragment());
+        fragments.add(new PropertyAnimatorFragment());
 
         adapter = new MyPagerAdapter(getSupportFragmentManager(), fragments);
 
@@ -151,7 +153,7 @@ public class MainActivity extends ActionBarActivity {
 
     public class MyPagerAdapter extends FragmentPagerAdapter {
 
-        private final String[] TITLES = {"首页", "CustomUI", "WaveView", "画布操作"};
+        private final String[] TITLES = {"首页", "CustomUI", "WaveView", "画布操作","小控件"};
         private ArrayList<Fragment> fragments = new ArrayList<>();
 
         MyPagerAdapter(FragmentManager fm) {

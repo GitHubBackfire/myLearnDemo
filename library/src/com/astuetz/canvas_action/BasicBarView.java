@@ -135,7 +135,6 @@ public class BasicBarView extends View {
                         getHeight()-bottomTextHeight-TEXT_TOP_MARGIN);*/
                 /**
                  * The correct total height is "getHeight()-topMargin-bottomTextHeight-TEXT_TOP_MARGIN",not "getHeight()-topMargin".
-                 * fix by zhenghuiy@gmail.com on 11/11/13.
                  */
                 rect.set(BAR_SIDE_MARGIN * i + barWidth * (i - 1), topMargin + (int) ((getHeight()
                                 - topMargin

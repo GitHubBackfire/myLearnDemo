@@ -11,6 +11,9 @@ import android.util.AttributeSet;
 import android.view.MotionEvent;
 import android.view.View;
 
+/**
+ * quadTo
+ */
 public class Bezier2View extends View {
     private Paint mPaint;
     private int centerX, centerY;
